@@ -1,0 +1,6 @@
+{
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": ["npm run format", "npm run lint"],
+    "src/**/*.scss": "npm run style-lint"
+  }
+}

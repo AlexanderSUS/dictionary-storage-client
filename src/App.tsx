@@ -1,11 +1,15 @@
 import React from 'react';
+import Header from './app/Header/Header';
+import Footer from './app/Footer/Footer';
+import AppRouter from './app/AppRouter/AppRouter';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header" />
-      <main>Hello world!</main>
-    </div>
+    <>
+      <Header />
+      <AppRouter />
+      <Footer />
+    </>
   );
 }
 

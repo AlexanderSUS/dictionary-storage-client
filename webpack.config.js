@@ -14,6 +14,12 @@ module.exports = {
   mode: process.env.NODE_ENV || 'development',
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
+    alias: {
+      app: path.resolve(__dirname, 'src/app'),
+      const: path.resolve(__dirname, 'src/const'),
+      pages: path.resolve(__dirname, 'src/pages'),
+      components: path.resolve(__dirname, 'src/components'),
+    }
   },
   devtool: 'source-map',
   module: {

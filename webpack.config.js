@@ -74,6 +74,7 @@ module.exports = {
     hot: true,
     static: './dist',
     port: 3000,
+    historyApiFallback: true,
   },
   optimization: {
     splitChunks: {

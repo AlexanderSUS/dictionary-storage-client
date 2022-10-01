@@ -1,0 +1,17 @@
+@import 'src';
+
+.link {
+  padding: 0.5em 1em;
+
+  text-transform: uppercase;
+  color: $text-color-light;
+  font-weight: bold;
+  font-size: $header-nav-link-font-size;
+
+  cursor: pointer;
+
+
+  &:hover {
+    color: $body-background-color;
+  }
+}

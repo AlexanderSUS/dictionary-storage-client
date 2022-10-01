@@ -1,7 +1,10 @@
+import Page from 'components/Page/Page';
 import React from 'react';
 
 const About = () => (
-  <div>About</div>
+  <Page>
+    <div>About</div>
+  </Page>
 );
 
 export default About;

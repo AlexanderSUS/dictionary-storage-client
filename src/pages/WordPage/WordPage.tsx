@@ -1,9 +1,13 @@
 import Page from 'components/Page/Page';
+import WordForm from 'forms/WordForm/WordForm';
 import React from 'react';
+
+import styles from './WordPage.module.scss';
 
 const WordPage = () => (
   <Page>
-    <h1>WordPage</h1>
+    <p className={styles.p}>Find your word via API</p>
+    <WordForm />
   </Page>
 );
 

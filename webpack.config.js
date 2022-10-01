@@ -19,6 +19,7 @@ module.exports = {
       const: path.resolve(__dirname, 'src/const'),
       pages: path.resolve(__dirname, 'src/pages'),
       components: path.resolve(__dirname, 'src/components'),
+      forms: path.resolve(__dirname, 'src/forms'),
     }
   },
   devtool: 'source-map',

@@ -8,8 +8,6 @@ html, body {
 }
 
 body {
-  min-height: calc(100vh - $page-indent);
-
   @include background-polka-dot;
 
   background-attachment: fixed;

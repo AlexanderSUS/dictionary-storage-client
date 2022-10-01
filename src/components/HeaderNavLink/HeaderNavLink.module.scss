@@ -4,7 +4,7 @@
   padding: 0.5em 1em;
 
   text-transform: uppercase;
-  color: $text-color-light;
+  color: $color-text-medium;
   font-weight: bold;
   font-size: $header-nav-link-font-size;
 
@@ -12,6 +12,6 @@
 
 
   &:hover {
-    color: $body-background-color;
+    color: $color-text-emphasize;
   }
 }

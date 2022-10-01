@@ -1,4 +1,4 @@
 $header-nav-link-font-size: 1.2rem;
 $header-nav-list-padding: 1rem;
 
-$page-indent: calc($header-nav-link-font-size + ($header-nav-list-padding * 2));
+$page-indent: calc($header-nav-link-font-size + ($header-nav-list-padding * 2) + 1rem);

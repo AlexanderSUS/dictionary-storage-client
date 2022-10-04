@@ -17,3 +17,8 @@ export type PublicWord = {
   partOfSpeech: string[];
   meaning: Meaning[];
 };
+
+export type ParseTextResponse = {
+  found: PublicWord[];
+  notFound: string[];
+};

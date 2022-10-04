@@ -18,7 +18,7 @@ const WordMeaning: React.FC<Props> = ({ meaning }) => {
   };
 
   return (
-    <div className={styles.listItem} key={meaning.partOfSpeech}>
+    <div className={styles.listItem}>
       <h5 className={styles.partOfSpeech}>
         {`${meaning.partOfSpeech}: `}
       </h5>

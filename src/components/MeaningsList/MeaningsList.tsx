@@ -8,7 +8,7 @@ type Props = {
 
 const MeaningsList: React.FC<Props> = ({ meanings }) => (
   <div>
-    {meanings.map((m) => (<WordMeaning meaning={m} key={m.partOfSpeech} />)) }
+    {meanings.map((m) => (<WordMeaning meaning={m} key={`${m.partOfSpeech}${m.definitions[0].definition}`} />)) }
   </div>
 );
 

@@ -1,0 +1,54 @@
+@import 'src';
+
+.p {
+  width: 480px;
+
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+
+  color: black;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  word-wrap: normal;
+  text-transform: uppercase;
+
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.error {
+  color: $color-text-dark;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.notFound {
+  width: 480px;
+  box-sizing: content-box;
+
+  margin: 1rem auto;
+  padding: 1rem;
+
+  font-weight: bold;
+  color: darkred;
+  background-color: white;
+
+  word-wrap: normal;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: $size-tablet) {
+  .p {
+    width: 200px;
+  }
+
+  .notFound {
+    max-width: 300px;
+  }
+}
+

@@ -6,11 +6,10 @@ import WordCard from 'components/WordCardPublic/WordCardPublic';
 
 import PublicService from 'api/PublicService';
 import { AxiosError } from 'axios';
-import mockedWord from 'const/mockWord';
 import styles from './WordPage.module.scss';
 
 const WordPage = () => {
-  const [word, setWord] = useState<PublicWord>(mockedWord);
+  const [word, setWord] = useState<PublicWord>();
   const [error, setError] = useState<boolean>(false);
   const [notFound, setNotFound] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);

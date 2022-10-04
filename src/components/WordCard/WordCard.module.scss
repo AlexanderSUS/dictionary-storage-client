@@ -1,0 +1,21 @@
+.card {
+  max-width: 480px;
+
+  margin: 0 auto;
+  padding: 1.5rem;
+
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+.word {
+  display: inline;
+  text-transform: capitalize;
+  text-indent: 2rem;
+}
+
+.phonetic {
+  display: inline;
+  padding-left: 2rem;
+}
+

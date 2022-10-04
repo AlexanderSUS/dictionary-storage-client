@@ -20,6 +20,7 @@ module.exports = {
       pages: path.resolve(__dirname, 'src/pages'),
       components: path.resolve(__dirname, 'src/components'),
       forms: path.resolve(__dirname, 'src/forms'),
+      api: path.resolve(__dirname, 'src/api'),
     }
   },
   devtool: 'source-map',

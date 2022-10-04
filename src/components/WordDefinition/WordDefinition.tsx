@@ -5,20 +5,15 @@ import styles from './WordDefinition.module.scss';
 
 type Props = {
   data: Definition;
+  isOpen: boolean;
 };
 
-const WordDefinition: React.FC<Props> = ({ data }) => {
+const WordDefinition: React.FC<Props> = ({ data, isOpen }) => {
   const { definition, example } = data;
 
   return (
-    <div className={styles.definition}>
-      <p>
-        <span className={styles.italic}>
-          Definition:
-        </span>
-        {' '}
-        {definition}
-      </p>
+    <div className={`${styles.definition} ${isOpen && styles.open}`}>
+      <p>{definition}</p>
       {example && (
       <p>
         <span className={styles.italic}>

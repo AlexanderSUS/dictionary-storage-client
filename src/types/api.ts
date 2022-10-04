@@ -3,7 +3,7 @@ export type Definition = {
   example?: string;
 };
 
-type Meaning = {
+export type Meaning = {
   partOfSpeech: string;
   definitions: Definition[];
   synonyms: string[];

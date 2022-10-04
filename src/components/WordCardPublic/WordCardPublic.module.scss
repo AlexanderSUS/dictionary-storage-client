@@ -1,3 +1,5 @@
+@import 'src';
+
 .card {
   max-width: 480px;
 
@@ -10,12 +12,23 @@
 
 .word {
   display: inline;
+
+  font-size: 1.6rem;
   text-transform: capitalize;
   text-indent: 2rem;
 }
 
 .phonetic {
   display: inline;
+
+  font-size: 1.6rem;
   padding-left: 2rem;
+}
+
+@media (max-width: $size-mobile) {
+  .card {
+    max-width: 300px;
+    padding: 1rem;
+  }
 }
 

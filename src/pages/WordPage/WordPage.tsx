@@ -2,14 +2,15 @@ import React, { useEffect, useState } from 'react';
 import Page from 'components/Page/Page';
 import WordForm from 'forms/WordForm/WordForm';
 import { PublicWord } from 'types/api';
-import WordCard from 'components/WordCard/WordCard';
+import WordCard from 'components/WordCardPublic/WordCardPublic';
 
 import PublicService from 'api/PublicService';
 import { AxiosError } from 'axios';
+import mockedWord from 'const/mockWord';
 import styles from './WordPage.module.scss';
 
 const WordPage = () => {
-  const [word, setWord] = useState<PublicWord>();
+  const [word, setWord] = useState<PublicWord>(mockedWord);
   const [error, setError] = useState<boolean>(false);
   const [notFound, setNotFound] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);

@@ -1,6 +1,26 @@
+@import 'src';
+
 .definition {
-  border-bottom: 1px solid grey;
+
+  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  &:not(:first-of-type) {
+    display: none;
+  }
+
+  &:not(:first-of-type) {
+    border-top: 1px solid $color-background-medium;
+  }
 }
+
+.open {
+  &:not(:first-of-type) {
+    display: block;
+  }
+} 
 
 .bold {
   font-weight: bold;

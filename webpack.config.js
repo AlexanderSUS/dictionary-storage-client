@@ -21,6 +21,7 @@ module.exports = {
       components: path.resolve(__dirname, 'src/components'),
       forms: path.resolve(__dirname, 'src/forms'),
       api: path.resolve(__dirname, 'src/api'),
+      icons: path.resolve(__dirname, 'src/icons'),
     }
   },
   devtool: 'source-map',

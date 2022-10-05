@@ -7,6 +7,7 @@ import { AxiosError } from 'axios';
 import TextForm from 'forms/TextForm/TextForm';
 import PublicCardList from 'components/PublicCardList/PublicCardList';
 import ResultList from 'components/ResultList/ResultList';
+import GoTopButton from 'components/GoTopButton/GoTopButton';
 import styles from './TextPage.module.scss';
 
 const TextPage = () => {
@@ -47,6 +48,7 @@ const TextPage = () => {
       />
       )}
       {!isLoading && data?.found.length && <PublicCardList cards={data?.found} />}
+      <GoTopButton />
     </Page>
   );
 };

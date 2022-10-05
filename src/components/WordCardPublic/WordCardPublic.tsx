@@ -15,7 +15,7 @@ const WordCard: React.FC<Props> = ({ data }) => {
   } = data;
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} id={data.word}>
       <h3 className={styles.word}>{word}</h3>
       <p className={styles.phonetic}>{phonetic}</p>
       <audio>

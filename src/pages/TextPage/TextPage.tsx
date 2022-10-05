@@ -6,6 +6,7 @@ import { AxiosError } from 'axios';
 
 import TextForm from 'forms/TextForm/TextForm';
 import PublicCardList from 'components/PublicCardList/PublicCardList';
+import ResultList from 'components/ResultList/ResultList';
 import styles from './TextPage.module.scss';
 
 const TextPage = () => {
@@ -38,12 +39,12 @@ const TextPage = () => {
       <TextForm parseText={parseText} />
       {isLoading && <h3 className={styles.error}>Loading...</h3>}
       {error && <h3>Opps, some erronr occoured</h3>}
-      {!isLoading && data?.notFound.length && (
-      <p className={styles.notFound}>
-        Not found words:
-        {' '}
-        {data.notFound.join(', ')}
-      </p>
+      {(data?.found || data?.notFound)
+      && (
+      <ResultList
+        found={data?.found.map((wordData) => wordData.word)}
+        notFound={data?.notFound}
+      />
       )}
       {!isLoading && data?.found.length && <PublicCardList cards={data?.found} />}
     </Page>

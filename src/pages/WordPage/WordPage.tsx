@@ -6,6 +6,7 @@ import WordCard from 'components/WordCardPublic/WordCardPublic';
 
 import PublicService from 'api/PublicService';
 import { AxiosError } from 'axios';
+import Loader from 'components/Loader/Loader';
 import styles from './WordPage.module.scss';
 
 const WordPage = () => {
@@ -40,7 +41,7 @@ const WordPage = () => {
     <Page>
       <p className={styles.p}>Find your word via API</p>
       <WordForm findWord={findWord} />
-      {isLoading && <h3 className={styles.error}>Loading...</h3>}
+      {isLoading && <Loader />}
       {error && <h3>Opps, some erronr occoured</h3>}
       {!isLoading && word && <WordCard data={word} />}
       {!isLoading && notFound && <h3 className={styles.error}>Word not found</h3>}

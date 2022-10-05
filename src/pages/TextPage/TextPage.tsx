@@ -8,6 +8,7 @@ import TextForm from 'forms/TextForm/TextForm';
 import PublicCardList from 'components/PublicCardList/PublicCardList';
 import ResultList from 'components/ResultList/ResultList';
 import GoTopButton from 'components/GoTopButton/GoTopButton';
+import Loader from 'components/Loader/Loader';
 import styles from './TextPage.module.scss';
 
 const TextPage = () => {
@@ -38,7 +39,7 @@ const TextPage = () => {
     <Page>
       <p className={styles.p}>Get definitions of words from inserted text</p>
       <TextForm parseText={parseText} />
-      {isLoading && <h3 className={styles.error}>Loading...</h3>}
+      {isLoading && <Loader />}
       {error && <h3>Opps, some erronr occoured</h3>}
       {(data?.found || data?.notFound)
       && (

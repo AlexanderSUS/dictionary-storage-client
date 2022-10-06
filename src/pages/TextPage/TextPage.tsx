@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Page from 'components/Page/Page';
 import { ParseTextResponse } from 'types/api';
 import PublicService from 'api/PublicService';
@@ -12,13 +12,14 @@ import Loader from 'components/Loader/Loader';
 import styles from './TextPage.module.scss';
 
 const TextPage = () => {
-  const [data, setData] = useState<ParseTextResponse>();
+  const [data, setData] = useState<ParseTextResponse | null>(null);
   const [error, setError] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const parseText = async (query: string) => {
     setIsLoading(true);
     setError(false);
+    setData(null);
 
     try {
       const res = await PublicService.parseText(query);
@@ -32,8 +33,6 @@ const TextPage = () => {
       setIsLoading(false);
     }
   };
-
-  useEffect(() => {}, [error]);
 
   return (
     <Page>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Page from 'components/Page/Page';
 import WordForm from 'forms/WordForm/WordForm';
 import { PublicWord } from 'types/api';
@@ -10,7 +10,7 @@ import Loader from 'components/Loader/Loader';
 import styles from './WordPage.module.scss';
 
 const WordPage = () => {
-  const [word, setWord] = useState<PublicWord>();
+  const [word, setWord] = useState<PublicWord | null>(null);
   const [error, setError] = useState<boolean>(false);
   const [notFound, setNotFound] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -19,6 +19,7 @@ const WordPage = () => {
     setNotFound(false);
     setIsLoading(true);
     setError(false);
+    setWord(null);
 
     try {
       const res = await PublicService.findWord(query);
@@ -34,8 +35,6 @@ const WordPage = () => {
       setIsLoading(false);
     }
   };
-
-  useEffect(() => {}, [error]);
 
   return (
     <Page>

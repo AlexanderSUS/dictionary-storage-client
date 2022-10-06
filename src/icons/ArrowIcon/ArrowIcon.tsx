@@ -7,18 +7,11 @@ type Props = {
   isOpen: boolean;
 };
 
-const ArrowUpIcon: React.FC<Props> = ({ onClick, isOpen }) => {
-  const styleTransform = { transform: 'rotate(180deg)' };
-
-  return (
-    <svg
-      style={isOpen ? styleTransform : undefined}
-      onClick={onClick}
-      className={styles.icon}
-      viewBox="0 0 24 24"
-    >
-      <path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z" />
-    </svg>
-  );
-};
+const ArrowUpIcon: React.FC<Props> = ({ onClick, isOpen }) => (
+  <button className={styles.button} type="button" onClick={onClick}>
+    <i
+      className={`${styles.icon} ${isOpen ? styles.up : styles.down}`}
+    />
+  </button>
+);
 export default ArrowUpIcon;

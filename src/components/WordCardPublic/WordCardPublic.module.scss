@@ -1,6 +1,7 @@
 @import 'src';
 
 .card {
+  box-sizing: border-box;
   max-width: 480px;
 
   margin: 0 auto 1rem auto;

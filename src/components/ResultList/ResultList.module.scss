@@ -1,10 +1,13 @@
 @import 'src';
 
 .result {
+  box-sizing: border-box;
   width: 480px;
   margin: 1rem auto;
   padding: 1rem;
   background-color: white;
+
+  border-radius: 0.5rem;
 }
 
 .green {

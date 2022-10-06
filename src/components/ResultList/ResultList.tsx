@@ -28,7 +28,7 @@ const ResultList: React.FC<Props> = ({ found, notFound }) => {
       </p>
       )}
       {notFound.length ? (
-        <p>
+        <p className={styles.notFound}>
           <span className={styles.red}>Not found words: </span>
           {notFound.join(', ')}
         </p>

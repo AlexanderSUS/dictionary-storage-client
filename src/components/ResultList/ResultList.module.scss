@@ -1,3 +1,5 @@
+@import 'src';
+
 .result {
   width: 480px;
   margin: 1rem auto;
@@ -11,11 +13,29 @@
 }
 
 .link {
-  color: black;
+  color: $color-text-dark;
   text-decoration: underline;
+
+  &:visited {
+    color: $color-text-medium; 
+  }
+
+  &:active {
+    color: $color-text-emphasize;
+  }
 }
 
 .red {
   font-weight: bold;
-  color: red;
+  color: $color-text-red;
+}
+
+@media (max-width: $size-tablet) {
+  .result {
+    max-width: 300px;
+  }
+
+  .link, .green, .notFound {
+    font-size: 1.4rem;
+  }
 }

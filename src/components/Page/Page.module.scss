@@ -1,6 +1,7 @@
 @import 'src';
 
 .main {
+  flex: 1;
   margin-top: $page-indent;
-  margin-bottom: $page-indent;
+  margin-bottom: 1rem;
 }

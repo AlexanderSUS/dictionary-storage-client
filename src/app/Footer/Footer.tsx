@@ -1,7 +1,12 @@
 import React from 'react';
 
+import styles from './Footer.module.scss';
+
 const Footer = () => (
-  <footer>Footer</footer>
+  <footer className={styles.footer}>
+    <a className={styles.link} href="https://github.com/AlexanderSUS">AlexanderSus</a>
+    <span className={styles.span}>2022</span>
+  </footer>
 );
 
 export default Footer;

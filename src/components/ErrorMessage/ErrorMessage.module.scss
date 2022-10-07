@@ -1,11 +1,21 @@
 @import 'src';
 
 .error {
+  width: 480px;
+
+  margin: 0 auto;
+
   color: $color-text-dark;
   font-size: 2rem;
-  text-transform: uppercase;
   text-align: center;
 
   border-radius: 1rem;
   background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+@media (max-width: $size-tablet) {
+  .error {
+    width: 300px;
+  }
 }

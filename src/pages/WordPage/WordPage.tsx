@@ -8,7 +8,7 @@ import PublicService from 'api/PublicService';
 import { AxiosError } from 'axios';
 import Loader from 'components/Loader/Loader';
 import PageTitlePublic from 'components/PageTitlePublic/PageTitlePublic';
-import styles from './WordPage.module.scss';
+import ErrorMessage from 'components/ErrorMessage/ErrorMessage';
 
 const WordPage = () => {
   const [word, setWord] = useState<PublicWord | null>(null);
@@ -27,7 +27,7 @@ const WordPage = () => {
 
       setWord(res.data);
     } catch (e) {
-      if (e instanceof AxiosError && e.response && e.response.data.message === 'Word not found') {
+      if (e instanceof AxiosError && e.response && e.response.data && e.response.data.message === 'Word not found') {
         setNotFound(true);
       } else {
         setError(true);
@@ -42,9 +42,9 @@ const WordPage = () => {
       <PageTitlePublic>Find your word via API</PageTitlePublic>
       <WordForm findWord={findWord} />
       {isLoading && <Loader />}
-      {error && <h3>Opps, some erronr occoured</h3>}
+      {error && <ErrorMessage />}
       {!isLoading && word && <WordCard data={word} />}
-      {!isLoading && notFound && <h3 className={styles.error}>Word not found</h3>}
+      {!isLoading && notFound && <ErrorMessage text="Word not found" />}
     </Page>
   );
 };

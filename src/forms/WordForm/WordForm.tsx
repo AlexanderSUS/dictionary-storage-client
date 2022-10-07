@@ -1,3 +1,4 @@
+import ButtonSubmit from 'components/ButtonSubmit/ButtonSubmit';
 import React, { SyntheticEvent } from 'react';
 
 import styles from './WordForm.module.scss';
@@ -27,7 +28,7 @@ const WordForm: React.FC<Props> = ({ findWord }) => {
       onSubmit={handleSubmit}
     >
       <input className={styles.input} type="text" name="word" />
-      <input className={styles.submit} type="submit" value="find" />
+      <ButtonSubmit value="find" />
     </form>
   );
 };

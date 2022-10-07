@@ -1,3 +1,4 @@
+import ButtonSubmit from 'components/ButtonSubmit/ButtonSubmit';
 import React, { SyntheticEvent } from 'react';
 
 import styles from './TextForm.module.scss';
@@ -27,7 +28,8 @@ const TextForm: React.FC<Props> = ({ parseText }) => {
       onSubmit={handleSubmit}
     >
       <textarea className={styles.textarea} name="text" rows={5} cols={33} />
-      <input className={styles.submit} type="submit" value="parse" />
+      <ButtonSubmit value="parse" style={styles.submit} />
+      {/* <input className={styles.submit} type="submit" value="parse" /> */}
     </form>
   );
 };

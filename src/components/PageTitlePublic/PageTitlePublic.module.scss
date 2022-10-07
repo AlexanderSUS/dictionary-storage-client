@@ -1,0 +1,28 @@
+@import 'src';
+
+.p {
+  box-sizing: border-box;
+  width: 480px;
+
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+
+  color: $color-text-light;
+
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  word-wrap: normal;
+  text-transform: uppercase;
+
+  border: 1px solid $color-background-medium;
+  border-radius: 1rem;
+  background-color: $color-background-dark;
+}
+
+@media (max-width: $size-tablet) {
+  .p {
+    width: 200px;
+  }
+}
+

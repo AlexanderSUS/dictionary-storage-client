@@ -9,7 +9,8 @@ import PublicCardList from 'components/PublicCardList/PublicCardList';
 import ResultList from 'components/ResultList/ResultList';
 import GoTopButton from 'components/GoTopButton/GoTopButton';
 import Loader from 'components/Loader/Loader';
-import styles from './TextPage.module.scss';
+import PageTitlePublic from 'components/PageTitlePublic/PageTitlePublic';
+// import styles from './TextPage.module.scss';
 
 const TextPage = () => {
   const [data, setData] = useState<ParseTextResponse | null>(null);
@@ -36,7 +37,7 @@ const TextPage = () => {
 
   return (
     <Page>
-      <p className={styles.p}>Get definitions of words from inserted text</p>
+      <PageTitlePublic>Get definitions of words from inserted text</PageTitlePublic>
       <TextForm parseText={parseText} />
       {isLoading && <Loader />}
       {error && <h3>Opps, some erronr occoured</h3>}

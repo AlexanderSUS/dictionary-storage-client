@@ -6,6 +6,7 @@
 
 .textarea {
   display: block;
+  box-sizing: border-box;
 
   margin: 0 auto;
   padding: 0.4rem;
@@ -29,6 +30,10 @@
 
 @media (max-width: $size-tablet) {
   .textarea {
-    width: 300px;
+    width: 95%;
+  }
+
+  .submit {
+    margin-top: 0.5rem;
   }
 }

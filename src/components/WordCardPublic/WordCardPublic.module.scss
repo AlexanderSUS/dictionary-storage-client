@@ -2,7 +2,7 @@
 
 .card {
   box-sizing: border-box;
-  max-width: 480px;
+  width: 480px;
 
   margin: 0 auto 1rem auto;
   padding: 1.5rem;
@@ -30,7 +30,7 @@
 
 @media (max-width: $size-mobile) {
   .card {
-    max-width: 300px;
+    width: 95%;
     padding: 1rem;
   }
 }

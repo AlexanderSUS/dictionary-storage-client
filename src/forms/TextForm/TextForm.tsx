@@ -29,7 +29,6 @@ const TextForm: React.FC<Props> = ({ parseText }) => {
     >
       <textarea className={styles.textarea} name="text" rows={5} cols={33} />
       <ButtonSubmit value="parse" style={styles.submit} />
-      {/* <input className={styles.submit} type="submit" value="parse" /> */}
     </form>
   );
 };

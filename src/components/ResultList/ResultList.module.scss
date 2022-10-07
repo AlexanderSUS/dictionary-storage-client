@@ -5,14 +5,14 @@
   width: 480px;
   margin: 1rem auto;
   padding: 1rem;
-  background-color: white;
+  background-color: $color-background-light;
 
   border-radius: 0.5rem;
 }
 
 .green {
   font-weight: bold;
-  color:green;
+  color: $color-text-green;
 }
 
 .link {

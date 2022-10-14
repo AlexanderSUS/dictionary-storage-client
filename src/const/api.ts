@@ -6,4 +6,7 @@ export enum ApiEnpoint {
   words = 'words',
   text = 'text',
   public = 'public',
+  auth = 'auth',
+  signup = 'signup',
+  login = 'login',
 }

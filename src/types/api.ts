@@ -22,3 +22,8 @@ export type ParseTextResponse = {
   found: PublicWord[];
   notFound: string[];
 };
+
+export type AuthUserData = {
+  login: string;
+  password: string;
+};

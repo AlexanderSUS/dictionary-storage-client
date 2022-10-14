@@ -1,30 +1,25 @@
-import ButtonSubmit from 'components/ButtonSubmit/ButtonSubmit';
-import Page from 'components/Page/Page';
 import React from 'react';
+import AuthForm from 'components/AuthForm/AuthForm';
+import Page from 'components/Page/Page';
 
 import styles from './SignUp.module.scss';
 
 const SignUp = () => {
-  const loginId = 'login';
+  // const [isError, setError] = useState<boolean>(false);
+  // const [succes, setSucces] = useState<string>('');
+  // const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const setUserData = (...data: string[]) => {
+    data.forEach((d) => console.log(d));
+  };
 
   return (
     <Page>
       <h1 className={styles.heading}>Sign Up</h1>
-      <form className={styles.form}>
-        <label htmlFor={loginId}>
-          Login
-          <input className={styles.input} type="text" name={loginId} id="login" />
-        </label>
-        <label htmlFor="passwords">
-          Password
-          <input className={styles.input} type="text" name="password" id="password" />
-        </label>
-        <label htmlFor="confirm">
-          Confirm password
-          <input className={styles.input} type="text" name="confirm" id="confirm" />
-        </label>
-        <ButtonSubmit value="submit" />
-      </form>
+      <AuthForm setUserData={setUserData} />
+      {/* {isLoading && <p>Lodading...</p>}
+      {isError && <p>Error</p>}
+      {succes && <p>{succes}</p>} */}
     </Page>
 
   );

@@ -5,14 +5,16 @@ import styles from './ButtonSubmit.module.scss';
 type Props = {
   value: string;
   style?: string;
+  disabled?: boolean;
 };
 
-const ButtonSubmit: React.FC<Props> = ({ value, style }) => (
-  <input className={`${styles.submit} ${style || ''}`} type="submit" value={value} />
+const ButtonSubmit: React.FC<Props> = ({ value, style, disabled }) => (
+  <input className={`${styles.submit} ${style || ''}`} type="submit" value={value} disabled={disabled} />
 );
 
 ButtonSubmit.defaultProps = {
   style: '',
+  disabled: false,
 };
 
 export default ButtonSubmit;
